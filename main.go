@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"os"
+	"strings"
 )
 
 var originUnit string
@@ -17,7 +18,7 @@ var errInvalidArguments = errors.New("Invalid arguments")
 var errReadingInput = errors.New("Error reading input")
 
 func main() {
-if os.Args.len != 2 {
+if len(os.Args) != 2 {
 	printError(errInvalidArguments)
 }
 
